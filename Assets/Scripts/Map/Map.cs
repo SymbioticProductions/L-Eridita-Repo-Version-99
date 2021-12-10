@@ -11,8 +11,8 @@ public class Map : MonoBehaviour {
     public bool bl_Hex_Police; //same here but information on if it has a police station
 
     //Size of the Map in terms of the number of hexagonal tiles and not world space
-    int int_Map_Width = 20;
-    int int_Map_Height = 10;//resized
+    int int_Map_Width = 30;
+    int int_Map_Height = 15;//resized
 
     //Offset of tiles to stagger them
     float fl_xOffset = 0.880f;
