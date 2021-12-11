@@ -263,7 +263,7 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   playerCameraTransform: {fileID: 9120787644450685712}
-  fl_Movement_Speed: 0.1
+  fl_Movement_Speed: 0.025
   fl_Movement_Time: 5
   vec_New_Position: {x: 0, y: 0, z: 0}
 --- !u!114 &4344976249544324888
