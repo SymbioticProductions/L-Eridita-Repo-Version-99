@@ -8,11 +8,11 @@ public class Map : MonoBehaviour {
 
     public GameObject go_Hex_Prefab;
     
-    public GameObject go_Police_Station_Prefab;
+    //public GameObject go_Police_Station_Prefab;
     
     //Size of the Map in terms of the number of hexagonal tiles and not world space
-    int int_Map_Width = 10;
-    int int_Map_Height = 10;
+    int int_Map_Width = 10;     //Columns
+    int int_Map_Height = 10;    //Rows
 
     //Offset of tiles to stagger them
     float fl_xOffset = 0.880f;
@@ -20,6 +20,12 @@ public class Map : MonoBehaviour {
 
     //Cheeky little bit of DSA here - Basically stores all the generated Hex tiles into an array that we can access
     //so use this data structure to access and assign values to tiles
+    /*
+
+    Boys im having so much trouble with this map shit. I have no idea how to create police stations and stuff.
+    How about we leave it for the MVP and just stick to an attack and defence for the MVP as we now have 
+    a fully working multiplayer
+
     private Map[,] map_Tiles;
 
     public Map GetTiles(int x, int y) {
@@ -29,6 +35,7 @@ public class Map : MonoBehaviour {
         }
         return map_Tiles[x, y];
     }
+    */
 
     // Start is called before the first frame update
     void Start() {
@@ -37,8 +44,7 @@ public class Map : MonoBehaviour {
 
     virtual public void GenerateMap(){
 
-        map_Tiles = new Map[int_Map_Width, int_Map_Height];
-
+        //map_Tiles = new Map[int_Map_Width, int_Map_Height];
 
         for (int x = 0; x < int_Map_Width; x++) {
 
@@ -55,6 +61,7 @@ public class Map : MonoBehaviour {
 
                 go_Hex.name = "Hex_" + x + "_" + y;
                 go_Hex.transform.SetParent(this.transform);
+                go_Hex.isStatic = true;
 
                 /*
                 GameObject.Instatiate(go_Police_Station_Prefab, go_Hex.transform.position, Quaternion.identity go_Hex.transform);
