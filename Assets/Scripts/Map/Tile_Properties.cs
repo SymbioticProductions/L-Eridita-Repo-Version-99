@@ -31,15 +31,5 @@ public class Tile_Properties : MonoBehaviour
                // add.hex_Storage<go_Hex.name, dbl_Hex_Attack, bl_Hex_Police>; //does this work?
 
                
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

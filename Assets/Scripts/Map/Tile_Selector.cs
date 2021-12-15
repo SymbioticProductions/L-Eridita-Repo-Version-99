@@ -6,6 +6,8 @@ public class Tile_Selector : MonoBehaviour
 {
     RaycastHit hit;
 
+    int int_Owned_Hex = 0;
+
     // Update is called once per frame
     void Update()
     {
@@ -26,7 +28,17 @@ public class Tile_Selector : MonoBehaviour
 
             }
 
-        }
+            if (Input.GetMouseButtonUp(0)) {
 
+                MeshRenderer releaseRenderer = go_Hit_Object.GetComponentInChildren<MeshRenderer>();
+                releaseRenderer.material.color = Color.white;
+                int_Owned_Hex++;
+
+                //Check if tile is owned - if yes dont move - else move
+                //If yes check player stats against tile stats - if player_stats > tile_stats move else dont move
+
+            }
+
+        }
     }
 }
