@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Mirror;
 
 //The job of this script is to spawn hexagonal tiles creating a basic map
 
-public class Map : MonoBehaviour {
+public class Map : NetworkBehaviour {
+
+    [SerializeField] private Material Transparent_Material;
 
     public GameObject go_Hex_Prefab;
     
@@ -32,6 +35,7 @@ public class Map : MonoBehaviour {
                 GameObject go_Hex = (GameObject)Instantiate(go_Hex_Prefab, new Vector3( fl_xPos, 0, y * fl_zOffset), Quaternion.identity);      //Create an instance of the hex prefab with the following co-ordinates.             
 
                 go_Hex.name = "Hex_" + x + "_" + y;
+                go_Hex.layer = LayerMask.NameToLayer("HexTiles");
                 go_Hex.transform.SetParent(this.transform);
                 go_Hex.isStatic = true;
 

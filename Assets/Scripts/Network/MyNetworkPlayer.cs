@@ -9,16 +9,14 @@ public class MyNetworkPlayer : NetworkBehaviour {
     [SerializeField] private Renderer displayColourRenderer = null;
 
     [SyncVar]
-    [SerializeField]
-    private string str_Display_Name = "Missing Name";    //Players Name
+    [SerializeField] public string str_Display_Name = "Missing Name";    //Players Name
 
     [SyncVar(hook = nameof(HandleDisplayColourUpdated))]
-    [SerializeField]
-    private Color colour_Display_Colour = Color.black;  //Create player colour variable
+    [SerializeField] private Color colour_Display_Colour = Color.black;  //Create player colour variable
 
     [Server]
     public void SetDisplayName(string str_New_Display_Name) {
-        str_Display_Name = str_New_Display_Name;           //Get the players name
+        str_Display_Name = str_New_Display_Name;          //Get the players name
     }
 
     [Server]

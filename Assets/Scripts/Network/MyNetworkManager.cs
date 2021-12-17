@@ -25,12 +25,18 @@ public class MyNetworkManager : NetworkManager {
         Then it will grab their base component and set their name respective to the number of players in the game
         Can change this later to set their display name to a string that is asked for when they join
     */
+
+    public string playerName;
+
     public override void OnServerAddPlayer(NetworkConnection conn) {
 
         base.OnServerAddPlayer(conn);
 
         MyNetworkPlayer player = conn.identity.GetComponent<MyNetworkPlayer>();
         player.SetDisplayName($"Player {numPlayers}");
+        player.name = $"Player {numPlayers}";
+
+        playerName = player.name;
 
         if (numPlayers == 1) {
             Debug.Log($"There is {numPlayers} player on the server");
@@ -38,9 +44,11 @@ public class MyNetworkManager : NetworkManager {
             Debug.Log($"There are {numPlayers} players on the server");
         }
 
-        Color colour_Display_Colour = new Color(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f));
-
-        player.SetDisplayColour(colour_Display_Colour);
+        if (player.name.Equals("Player 1")) {
+            player.SetDisplayColour(Color.blue);
+        } else if (player.name.Equals("Player 2")) {
+            player.SetDisplayColour(Color.red);
+        }
 
     }
 

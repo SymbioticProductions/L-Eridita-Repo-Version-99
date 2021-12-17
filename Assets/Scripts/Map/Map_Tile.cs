@@ -1,15 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Mirror;
 
-public class Main_Game_Logic : Map
+public class Map_Tile : MonoBehaviour
 {
-
     // Start is called before the first frame update
     void Start()
     {
-        GenerateMap();
+        
     }
 
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
 }

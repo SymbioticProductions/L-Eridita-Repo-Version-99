@@ -371,6 +371,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1024777849}
   - component: {fileID: 1024777848}
+  - component: {fileID: 1024777850}
+  - component: {fileID: 1024777851}
   m_Layer: 0
   m_Name: MouseManager
   m_TagString: Untagged
@@ -405,6 +407,48 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1024777850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1024777847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b0fecffa3f624585964b0d0eb21b18e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Port: 7777
+  DualMode: 1
+  NoDelay: 1
+  Interval: 10
+  Timeout: 10000
+  FastResend: 2
+  CongestionWindow: 0
+  SendWindowSize: 4096
+  ReceiveWindowSize: 4096
+  NonAlloc: 1
+  debugLog: 0
+  statisticsGUI: 0
+  statisticsLog: 0
+--- !u!114 &1024777851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1024777847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 2797813242
+  serverOnly: 0
+  visible: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1 &1052379547
 GameObject:
   m_ObjectHideFlags: 0
@@ -459,6 +503,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1180867680}
   - component: {fileID: 1180867681}
+  - component: {fileID: 1180867682}
   m_Layer: 0
   m_Name: Map
   m_TagString: Untagged
@@ -493,7 +538,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd863bf9ddf169c4aab03ec580b788e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  Transparent_Material: {fileID: 2100000, guid: cea2f93a1ff672845b9604c9ca243102, type: 2}
   go_Hex_Prefab: {fileID: 3127517078386962423, guid: 60a2b6823fc06274db486a8ac77204ab, type: 3}
+--- !u!114 &1180867682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1180867678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 3282714793
+  serverOnly: 0
+  visible: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1 &1292874048
 GameObject:
   m_ObjectHideFlags: 0
@@ -506,7 +571,7 @@ GameObject:
   - component: {fileID: 1292874051}
   - component: {fileID: 1292874050}
   - component: {fileID: 1292874049}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Map_Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -585,7 +650,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1292874048}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4, y: 0, z: 3.5}
+  m_LocalPosition: {x: 4.2, y: 0, z: 3.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

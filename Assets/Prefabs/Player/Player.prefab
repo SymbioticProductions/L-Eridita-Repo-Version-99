@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9120787644450685712}
   - component: {fileID: 2907841701094199066}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -83,7 +83,7 @@ GameObject:
   - component: {fileID: 361924540391802137}
   - component: {fileID: 8538821971324817065}
   - component: {fileID: 770138288295226611}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -178,7 +178,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6137968355517896018}
   - component: {fileID: 5890471366035252333}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: cm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -224,7 +224,7 @@ GameObject:
   - component: {fileID: 8323331663291961751}
   - component: {fileID: 4344976249544324888}
   - component: {fileID: -7762762259721420320}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
