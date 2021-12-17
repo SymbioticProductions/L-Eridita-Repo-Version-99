@@ -7,18 +7,10 @@ using UnityEngine.UI;
 
 public class Main_Game_Logic : Map
 {
-    
-
-    // Start is called before the first frame update
-    public void Start()
-    {
-        GenerateMap();
-        
+    public void GameWinLogic() {
 
         if (Tile_Selector.int_Owned_Hex > 50)
         {
-
-           
 
             GameObject display = new GameObject("game over display");
             var game_Over_Display = display.AddComponent<Canvas> ();
@@ -43,10 +35,21 @@ public class Main_Game_Logic : Map
             text.fontSize = 20;
             text.color = Color.red;
             text.alignment = TextAnchor.MiddleCenter;
-
-
         }
+    }
 
+    // Start is called before the first frame update
+    public void Start()
+    {
+        GenerateMap();
+
+    }
+
+    void Update() {
+        
+        Debug.Log(Tile_Selector.int_Owned_Hex);
+
+        GameWinLogic();
 
     }
 }
