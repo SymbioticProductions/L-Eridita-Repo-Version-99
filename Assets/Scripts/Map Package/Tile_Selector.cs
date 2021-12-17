@@ -3,10 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
 
+
+
 public class Tile_Selector : NetworkBehaviour
 {
     RaycastHit hit;
-    int int_Owned_Hex = 0;
+
+
+    public static int int_Owned_Hex = 0;
+
 
     public string str_Display_Name;
 
@@ -34,14 +39,16 @@ public class Tile_Selector : NetworkBehaviour
                 releaseRenderer.material.color = Color.green;
 
                 int_Owned_Hex++;
+                
 
                 //Check if tile is owned - if yes dont move - else move
                 //If yes check player stats against tile stats - if player_stats > tile_stats move and change colour of the tile to the players colour else dont move
 
+            
             }
 
         }
 
-    }
+    } 
 
 }
