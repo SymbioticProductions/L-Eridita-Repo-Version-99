@@ -303,6 +303,7 @@ MonoBehaviour:
   autoCreatePlayer: 1
   playerSpawnMethod: 1
   spawnPrefabs: []
+  playerName: 
 --- !u!1 &309014675
 GameObject:
   m_ObjectHideFlags: 0
@@ -810,6 +811,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57bba98b698046a46b1c43fe8b129c42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  str_Display_Name: 
 --- !u!4 &1024777849
 Transform:
   m_ObjectHideFlags: 0

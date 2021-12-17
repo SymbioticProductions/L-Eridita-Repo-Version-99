@@ -33,7 +33,7 @@ public class Main_Game_Logic : Map
             text.text = "The game has been won";
             text.font = Resources.FindObjectsOfTypeAll<Font>()[0];
             text.fontSize = 20;
-            text.color = Color.red;
+            text.color = Color.white;
             text.alignment = TextAnchor.MiddleCenter;
         }
     }
