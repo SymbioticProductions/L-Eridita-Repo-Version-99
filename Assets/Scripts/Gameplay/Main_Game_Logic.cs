@@ -9,6 +9,7 @@ public class Main_Game_Logic : Map
     void Start()
     {
         GenerateMap();
+        
     }
 
 }
